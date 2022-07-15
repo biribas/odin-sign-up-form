@@ -38,6 +38,8 @@ body {
 }
 
 #content > footer {
+  display: flex;
+  flex-direction: column;
   bottom: 0;
   padding: 0.5rem;
   text-align: center;
