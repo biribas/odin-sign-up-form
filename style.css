@@ -3,6 +3,7 @@
 :root {
   font-family: 'Roboto Slab', sans-serif;
   font-size: 20px;
+  --leaf-green: #5c8355;
 }
 
 body {
@@ -11,9 +12,61 @@ body {
   height: 100vh;
 }
 
-body > section {
-  background-image: url(https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+#content {
+  position: relative;
+  height: 100vh;
 }
+
+#content > header,
+#content > footer {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  color: snow;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#content > header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  top: 25%;
+  font-size: 2rem;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+#content > footer {
+  bottom: 0;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+#content > img {
+  height: 100%;
+  width: 28rem ;
+  display: block;
+}
+
+a {
+  position: relative;
+  color: var(--leaf-green);
+  text-decoration: none;
+}
+
+a::after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid var(--leaf-green);
+  width: 0%;
+  transition: width .1s;
+  pointer-events: none;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
