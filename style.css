@@ -51,6 +51,22 @@ body {
   display: block;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#quote {
+  padding: 2rem;
+  font-size: 1.3rem;
+  width: 45ch;
+}
+
+#quote > p {
+  font-size: 1rem;
+}
+
 a {
   position: relative;
   color: var(--leaf-green);
