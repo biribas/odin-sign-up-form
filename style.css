@@ -103,6 +103,17 @@ form {
   height: 1.3rem;
   border: 1px lightgray solid;
   border-radius: 3px;
+  transition: border-color ease 0.2s, box-shadow ease 0.2s;
+}
+
+#form-inputs input:focus {
+  outline: none;
+  border-color: blue;
+  box-shadow: 2px 2px 2px lightgrey;
+}
+
+#form-inputs input:valid {
+  border-color: var(--leaf-green);
 }
 
 a {
