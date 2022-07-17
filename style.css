@@ -6,6 +6,7 @@
   --leaf-green: #5c8355;
   --input-height: 2.5rem;
   --input-vertical-gap: 1.5rem;
+  --standard-padding: 2rem;
 }
 
 body {
@@ -61,7 +62,7 @@ form {
 }
 
 #quote {
-  padding: 2rem;
+  padding: var(--standard-padding);
   margin: 0;
   font-size: 1.3rem;
   width: 45ch;
@@ -139,6 +140,33 @@ input:focus {
 
 #form-inputs input.invalid:not(:placeholder-shown) ~ #invalid-input {
   opacity: 1;
+}
+
+#form-buttons {
+  padding: var(--standard-padding);
+}
+
+#form-buttons #sign-up {
+  padding: 0.7rem 1.5rem;
+  background-color: var(--leaf-green);
+  color: snow;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px lightgrey;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#form-buttons #sign-up:hover {
+  background-color: #435f3e;
+}
+
+#form-buttons #log-in {
+  font-size: 0.8rem;
+  margin: 0;
 }
 
 a {
