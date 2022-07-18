@@ -135,8 +135,8 @@ input:focus {
   box-shadow: 2px 2px 2px lightgrey;
 }
 
-#form-inputs input:not(#confirm-password):valid,
-#confirm-password.match {
+#name-inputs input:valid,
+#information-inputs input:valid {
   border-color: var(--leaf-green);
 }
 

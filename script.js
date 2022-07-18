@@ -10,22 +10,20 @@ function validateForm(event) {
       event.preventDefault();
     }
   });
+  validatePassword(event)
   document.querySelector('.invalid').focus();
 }
 
-function handlePasswordFocusOut() {
-  if (this.checkValidity() && password.checkValidity() && this.value !== password.value) 
-    this.classList.add('invalid');
-}
-
-function handlePasswordInput() {
-  if ((this.id === 'password' && this.checkValidity() && this.value === confirmPassowrd.value) || 
-    (this.id === 'confirm-password' && this.checkValidity() && password.checkValidity() && this.value === password.value)) {
+function validatePassword(event) {
+  if (password.value === confirmPassowrd.value) {
     confirmPassowrd.classList.remove('invalid');
-    confirmPassowrd.classList.add('match');
+    return;
   }
-  else 
-    confirmPassowrd.classList.remove('match');
+
+  if (password.checkValidity()) {
+    confirmPassowrd.classList.add('invalid');
+    event.preventDefault();
+  }
 }
 
 inputs.forEach(input => input.addEventListener('focusout', () => {
@@ -38,7 +36,6 @@ inputs.forEach(input => input.addEventListener('input', () => {
     input.classList.remove('invalid');
 }));
 
-passwordInputs.forEach(input => input.addEventListener('input', handlePasswordInput));
-confirmPassowrd.addEventListener('focusout', handlePasswordFocusOut);
-
 document.addEventListener('submit', validateForm);
+
+
