@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
 :root {
-  box-sizing: border-box;
   font-family: 'Roboto Slab', sans-serif;
   font-size: 20px;
   --leaf-green: #5c8355;
@@ -10,10 +9,16 @@
   --standard-padding: 2rem;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   display: flex;
-  margin: 0;
+  flex-wrap: wrap;
   height: 100vh;
+  width: 100vw;
+  margin: 0;
 }
 
 #left-section,
@@ -21,19 +26,18 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
 }
 
 #left-section {
   background-image: url("https://images.unsplash.com/photo-1531292039036-7720ff2dadd5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
   background-position: center;
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
-  width: 40vw;
+  width: 40%;
 }
 
 #right-section {
-  width: 60vw;
+  width: 60%;
 }
 
 #left-section > header,
