@@ -70,7 +70,7 @@ body {
   padding: var(--standard-padding);
   margin: 0;
   font-size: 1.3rem;
-  width: min(80%, 45ch);
+  width: 80%;
 }
 
 #quote > p {
