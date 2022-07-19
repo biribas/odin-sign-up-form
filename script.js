@@ -1,5 +1,5 @@
 const inputs = document.querySelectorAll('input');
-const passwordInputs = document.querySelectorAll('#password-inputs input');
+const passwordInputs = document.querySelectorAll('input[type="password"]');
 const password = passwordInputs[0];
 const confirmPassowrd = passwordInputs[1];
 
