@@ -28,50 +28,41 @@
       <p>—Teccam, Theophany</p>
     </h2>
     <form action="" autocomplete="off" novalidate>
-      <section id="form-inputs">
+      <section id="form">
         <p id="form-title">Let's do this!</p>
-        <div id="name-inputs">
-          <label>
-            FIRST NAME:
-            <input type="text" id="first-name" name="first-name" placeholder=" " required>
-            <div id="empty-error">This field is required</div>
-          </label>
-          <label>
-            LAST NAME:
-            <input type="text" id="last-name" name="last-name" placeholder=" " required>
-            <div id="empty-error">This field is required</div>
-          </label>
-          </label>
+        <div class="input">
+          <label for="first-name">First name:</label>
+          <input type="text" id="first-name" name="first-name" placeholder=" " required>
+          <div class="error-message empty-error">This field is required</div>
         </div>
-        <div id="information-inputs">
-          <label>
-            EMAIL:
-            <input type="email" id="email" name="email" placeholder=" " required>
-            <div id="empty-error">This field is required</div>
-            <div id="invalid-input">Enter a valid email</div>
-          </label>
-          </label>
-          <label>
-            PHONE NUMBER:
-            <input type="tel" id="phone-number" name="phone-number" placeholder=" " pattern="\d{3}[\-]\d{3}[\-]\d{4}" required>
-            <div id="empty-error">This field is required</div>
-            <div id="invalid-input">Enter a number in the format of: 123-456-7890</div>
-          </label>
-          </label>
+        <div class="input">
+          <label for="last-name">Last name:</label>
+          <input type="text" id="last-name" name="last-name" placeholder=" " required>
+          <div class="error-message empty-error">This field is required</div>
         </div>
-        <div id="password-inputs">
-          <label>
-            PASSWORD:
-            <input type="password" id="password" name="password" minlength="8" placeholder=" " required>
-            <div id="empty-error">This field is required</div>
-            <div id="invalid-input">Password must be at least 8 characters long</div>
-          </label>
-          <label>
-            CONFIRM PASSWORD: 
-            <input type="password" id="confirm-password" name="confirm-password" placeholder=" " required>
-            <div id="empty-error">This field is required</div>
-            <div id="invalid-input">Passwords do not match</div>
-          </label>
+        <div class="input">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder=" " required>
+          <div class="error-message empty-error">This field is required</div>
+          <div class="error-message invalid-input">Enter a valid email</div>
+        </div>
+        <div class="input">
+          <label for="phone-number">Phone number:</label>
+          <input type="tel" id="phone-number" name="phone-number" placeholder=" " pattern="\d{3}[\-]\d{3}[\-]\d{4}" required>
+          <div class="error-message empty-error">This field is required</div>
+          <div class="error-message invalid-input">Enter a number in the format of: 123-456-7890</div>
+        </div>
+        <div class="input">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" minlength="8" placeholder=" " required>
+          <div class="error-message empty-error">This field is required</div>
+          <div class="error-message invalid-input">Password must be at least 8 characters long</div>
+        </div>
+        <div class="input">
+          <label for="confirm-password">Confirm password:</label>
+          <input type="password" id="confirm-password" name="confirm-password" placeholder=" " required>
+          <div class="error-message empty-error">This field is required</div>
+          <div class="error-message invalid-input">Passwords do not match</div>
         </div>
       </section>
     </form>
