@@ -71,7 +71,7 @@ body {
   padding: var(--standard-padding);
   margin: 0;
   font-size: 1.3rem;
-  width: 45ch;
+  width: min(80%, 45ch);
 }
 
 #quote > p {
@@ -184,7 +184,6 @@ input:focus {
 
 #form-buttons #log-in {
   font-size: 0.8rem;
-  margin: 0;
 }
 
 a {
