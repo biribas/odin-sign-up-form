@@ -10,74 +10,75 @@
   <title>Sign-up Form</title>
 </head>
 <body>
-  <section id="content">
+  <section id="left-section">
     <header>
       <i id="icon" class="ph-pencil"></i> 
       <span>Sign-up Form</span>
     </header>
-    <img src="https://images.unsplash.com/photo-1531292039036-7720ff2dadd5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="leafs">
     <footer>
       <span>Image by <a href="https://unsplash.com/@panduior">pandu ior</a> on <a href="https://unsplash.com/">Unsplash</a></span>
       <span>A project made by <a href="https://github.com/biribas">biribas</a> for <a href="https://www.theodinproject.com/">The Odin Project</a>
       </span>
     </footer>
   </section>
-  <form action="" autocomplete="off" novalidate>
-    <div></div>
+
+  <section id="right-section">
     <h2 id="quote">
       <q>There are three things all wise men fear: the sea in storm, a night with no moon, and the anger of a gentle man.</q>
       <p>—Teccam, Theophany</p>
     </h2>
-    <section id="form-inputs">
-      <p id="form-title">Let's do this!</p>
-      <div id="name-inputs">
-        <label>
-          FIRST NAME:
-          <input type="text" id="first-name" name="first-name" placeholder=" " required>
-          <div id="empty-error">This field is required</div>
-        </label>
-        <label>
-          LAST NAME:
-          <input type="text" id="last-name" name="last-name" placeholder=" " required>
-          <div id="empty-error">This field is required</div>
-        </label>
-        </label>
-      </div>
-      <div id="information-inputs">
-        <label>
-          EMAIL:
-          <input type="email" id="email" name="email" placeholder=" " required>
-          <div id="empty-error">This field is required</div>
-          <div id="invalid-input">Enter a valid email</div>
-        </label>
-        </label>
-        <label>
-          PHONE NUMBER:
-          <input type="tel" id="phone-number" name="phone-number" placeholder=" " pattern="\d{3}[\-]\d{3}[\-]\d{4}" required>
-          <div id="empty-error">This field is required</div>
-          <div id="invalid-input">Enter a number in the format of: 123-456-7890</div>
-        </label>
-        </label>
-      </div>
-      <div id="password-inputs">
-        <label>
-          PASSWORD:
-          <input type="password" id="password" name="password" minlength="8" placeholder=" " required>
-          <div id="empty-error">This field is required</div>
-          <div id="invalid-input">Password must be at least 8 characters long</div>
-        </label>
-        <label>
-          CONFIRM PASSWORD: 
-          <input type="password" id="confirm-password" name="confirm-password" placeholder=" " required>
-          <div id="empty-error">This field is required</div>
-          <div id="invalid-input">Passwords do not match</div>
-        </label>
-      </div>
-    </section>
-    <section id="form-buttons">
-      <button id="sign-up" type="submit">Create Account</button>
-      <p id="log-in">Already have an account? <a href="./index.html">Log in</a></p>
-    </section>
-  </form>
+    <form action="" autocomplete="off" novalidate>
+      <section id="form-inputs">
+        <p id="form-title">Let's do this!</p>
+        <div id="name-inputs">
+          <label>
+            FIRST NAME:
+            <input type="text" id="first-name" name="first-name" placeholder=" " required>
+            <div id="empty-error">This field is required</div>
+          </label>
+          <label>
+            LAST NAME:
+            <input type="text" id="last-name" name="last-name" placeholder=" " required>
+            <div id="empty-error">This field is required</div>
+          </label>
+          </label>
+        </div>
+        <div id="information-inputs">
+          <label>
+            EMAIL:
+            <input type="email" id="email" name="email" placeholder=" " required>
+            <div id="empty-error">This field is required</div>
+            <div id="invalid-input">Enter a valid email</div>
+          </label>
+          </label>
+          <label>
+            PHONE NUMBER:
+            <input type="tel" id="phone-number" name="phone-number" placeholder=" " pattern="\d{3}[\-]\d{3}[\-]\d{4}" required>
+            <div id="empty-error">This field is required</div>
+            <div id="invalid-input">Enter a number in the format of: 123-456-7890</div>
+          </label>
+          </label>
+        </div>
+        <div id="password-inputs">
+          <label>
+            PASSWORD:
+            <input type="password" id="password" name="password" minlength="8" placeholder=" " required>
+            <div id="empty-error">This field is required</div>
+            <div id="invalid-input">Password must be at least 8 characters long</div>
+          </label>
+          <label>
+            CONFIRM PASSWORD: 
+            <input type="password" id="confirm-password" name="confirm-password" placeholder=" " required>
+            <div id="empty-error">This field is required</div>
+            <div id="invalid-input">Passwords do not match</div>
+          </label>
+        </div>
+      </section>
+      <section id="form-buttons">
+        <button id="sign-up" type="submit">Create Account</button>
+        <p id="log-in">Already have an account? <a href="./index.html">Log in</a></p>
+      </section>
+    </form>
+  </section>
 </body>
 </html>

@@ -15,50 +15,56 @@ body {
   height: 100vh;
 }
 
-#content {
-  position: relative;
+#left-section,
+#right-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   height: 100vh;
 }
 
-#content > header,
-#content > footer {
+#left-section {
+  background-image: url("https://images.unsplash.com/photo-1531292039036-7720ff2dadd5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  width: 40vw;
+}
+
+#right-section {
+  width: 60vw;
+}
+
+#left-section > header,
+#left-section > footer {
+  display: flex;
   box-sizing: border-box;
-  position: absolute;
   width: 100%;
   color: snow;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-#content > header {
-  display: flex;
+#left-section > header {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  top: 25%;
   font-size: 2rem;
   padding: 1rem;
   font-weight: bold;
+  margin-top: 30%;
+  margin-bottom: auto;
 }
 
-#content > footer {
-  display: flex;
+#left-section > footer {
   flex-direction: column;
-  bottom: 0;
   padding: 0.5rem;
   text-align: center;
 }
 
-#content > img {
+#left-section > img {
   height: 100%;
   width: 28rem ;
   display: block;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1;
 }
 
 #quote {
