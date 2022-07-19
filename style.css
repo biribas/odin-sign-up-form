@@ -62,12 +62,6 @@ body {
   text-align: center;
 }
 
-#left-section > img {
-  height: 100%;
-  width: 28rem ;
-  display: block;
-}
-
 #quote {
   padding: var(--standard-padding);
   margin: 0;
