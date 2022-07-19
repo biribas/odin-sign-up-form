@@ -29,6 +29,7 @@ body {
 }
 
 #left-section {
+  position: relative;
   background-image: url("https://images.unsplash.com/photo-1531292039036-7720ff2dadd5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
   background-position: center;
   background-size: cover;
@@ -40,35 +41,34 @@ body {
   width: 60%;
 }
 
-#left-section > header,
-#left-section > footer {
+header,
+footer {
+  position: absolute;
   display: flex;
-  box-sizing: border-box;
   width: 100%;
   color: snow;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-#left-section > header {
-  align-items: center;
+header {
   justify-content: center;
   gap: 0.5rem;
   font-size: 2rem;
   padding: 1rem;
   font-weight: bold;
-  margin-top: 25vh;
-  margin-bottom: auto;
+  top: 30%;
 }
 
-#left-section > footer {
+footer {
   flex-direction: column;
   padding: 0.5rem;
   text-align: center;
+  bottom: 0;
 }
 
 #quote {
   padding: var(--standard-padding);
-  margin: 0;
+  margin-top: 0;
   font-size: 1.3rem;
   width: 80%;
 }
@@ -198,4 +198,3 @@ a::after {
 a:hover::after {
   width: 100%;
 }
-
