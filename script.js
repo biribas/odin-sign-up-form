@@ -10,7 +10,10 @@ function validateForm(event) {
       event.preventDefault();
     }
   });
-  validatePassword(event)
+
+  if (password.checkValidity()) 
+    validatePassword(event)
+
   document.querySelector('.invalid').focus();
 }
 
