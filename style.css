@@ -206,7 +206,7 @@ a:hover::after {
   body {
     position: relative;
     flex-flow: column nowrap;
-    padding-bottom: 4rem;
+    padding-bottom: 4.5rem;
     background-image: var(--image-url);
     background-position: center;
     background-size: cover;
@@ -226,7 +226,8 @@ a:hover::after {
   }
 
   footer {
-    height: auto;
+    height: 4.5rem;
+    justify-content: center;
     background-color: none;
   }
 
