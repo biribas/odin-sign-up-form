@@ -4,21 +4,22 @@
   font-family: 'Roboto Slab', sans-serif;
   font-size: 20px;
   --leaf-green: #5c8355;
-  --input-height: 2.5rem;
-  --input-vertical-gap: 1.5rem;
-  --standard-padding: 2rem;
+  --vertical-padding: 1.5rem;
+  --horizontal-padding: 2rem;
+  --image-url: url("https://images.unsplash.com/photo-1531292039036-7720ff2dadd5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
-  height: 100vh;
-  width: 100vw;
-  margin: 0;
+  min-height: 100vh;
 }
 
 #left-section,
@@ -30,7 +31,7 @@ body {
 
 #left-section {
   position: relative;
-  background-image: url("https://images.unsplash.com/photo-1531292039036-7720ff2dadd5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+  background-image: var(--image-url);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -39,6 +40,7 @@ body {
 
 #right-section {
   width: 60%;
+  background-color: white;
 }
 
 header,
@@ -68,14 +70,14 @@ footer {
 }
 
 #quote {
-  padding: var(--standard-padding);
-  margin-top: 0;
+  padding: var(--vertical-padding) var(--horizontal-padding);
   font-size: 1.3rem;
   width: 80%;
 }
 
 #quote > p {
   font-size: 1rem;
+  margin-top: 1rem;
 }
 
 #form {
@@ -84,7 +86,7 @@ footer {
   gap: 1rem;
   background-color: snow;
   width: 100%;
-  padding: var(--input-vertical-gap) 2rem;
+  padding: var(--vertical-padding) var(--horizontal-padding);
   box-shadow: 0 -1px 1px lightgrey, 0 5px 5px lightgrey;
 }
 
@@ -154,7 +156,7 @@ input:not([type="password"]):valid {
 }
 
 #buttons {
-  padding: var(--standard-padding);
+  padding: var(--vertical-padding) var(--horizontal-padding);
 }
 
 #buttons #sign-up {
@@ -198,4 +200,61 @@ a::after {
 
 a:hover::after {
   width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+  body {
+    position: relative;
+    flex-flow: column nowrap;
+    padding-bottom: 4rem;
+    background-image: var(--image-url);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #left-section {
+    height: 15vh;
+    width: 100vw;
+    position: static;
+    background-image: none;
+  }
+
+  header {
+    position: static;
+    height: 100%;
+  }
+
+  footer {
+    height: auto;
+    background-color: none;
+  }
+
+  #right-section {
+    width: 100vw;
+    justify-content: flex-start;
+  }
+
+  #quote {
+    padding: 1rem var(--horizontal-padding);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    text-align: center;
+  }
+
+  #quote {
+    width: 100%;
+    padding: 1rem auto;
+  }
+
+  #form {
+    justify-content: center;
+  }
+
+  .input {
+    width: 90%;
+  }
 }
